@@ -32,16 +32,9 @@ const addPatient = (
 
 const addPatientEntry = (
     entry: Entry, id: string ): Patient[] => {
+    console.log(entry, "entry");
     const patient = patientData.find(p => p.id === id);
     if(patient) {
-        // const newPatient: Patient = {
-        //     ...patient,
-        //     entries: patient.entries.concat(entry)
-        // }
-
-        // console.log(newPatient.entries, "patient uutta");
-        // const filteredPatiantData = patientData.filter(p => p.id !== patient.id);
-        // console.log()
         patientData.find(p => p.id === id)?.entries.push(entry);
         console.log(patientData, "patiantData");
         return patientData;

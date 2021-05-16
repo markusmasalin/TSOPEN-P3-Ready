@@ -43,7 +43,8 @@ export const toNewEntry = (object: Entry): Entry | undefined => {
             const newOHEntry: OccupationalHealthcareEntry = {
                 ...newEntry,
                type: object.type,
-               employerName: object.employerName
+               employerName: object.employerName,
+               sickLeave: object.sickLeave
               }
               return newOHEntry;
             case "HealthCheck": 
